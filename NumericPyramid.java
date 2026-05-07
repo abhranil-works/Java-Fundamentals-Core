@@ -10,7 +10,14 @@ import java.util.Scanner;
         //Outer loop.
         for(int i = 1; i <= rowCount; i++) {
 
-            //Inner loop. 
+            //1st Inner loop.
+            for(int j = 1; j <= rowCount - i; j++) {
+                System.out.print("   "); // It will make some spaces to make it look like full. 
+
+            }
+
+
+            //2nd Inner loop. 
             for(int j = 1; j <= i; j++) {
                 System.out.print(i + " "); //It will make some spaces for better visibility and add that symbol to make a Pyramid. 
 
