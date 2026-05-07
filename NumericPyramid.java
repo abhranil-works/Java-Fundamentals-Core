@@ -12,7 +12,7 @@ import java.util.Scanner;
 
             //1st Inner loop.
             for(int j = 1; j <= rowCount - i; j++) {
-                System.out.print("   "); // It will make some spaces to make it look like full. 
+                System.out.print(" "); // It will make some spaces to make it look like full. 
 
             }
 
