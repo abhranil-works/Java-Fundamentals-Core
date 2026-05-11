@@ -61,47 +61,42 @@ import java.util.Scanner;
     }
 
     
-    // public static void rotatedInvertedHalfPyramid(int rowCount, String symbol) {
-    //     //Using 'if-else' statement to protect from false inputs.
-    //     if(rowCount > 0) {
-    //         //Outer loop.
-    //         for(int i = rowCount; i >= 1; i--) {
-    //             //1st Inner loop, for initial visual spaces on the Rotated Inverted Half Pyramid. 
-    //             for(int j = 1; j <= rowCount - i; j++) {
+    public static void rotatedInvertedHalfPyramid(int rowCount, String symbol) {
+        //Using 'if-else' statement to protect from false inputs.
+        if(rowCount > 0) {
+            //Outer loop.
+            for(int i = rowCount; i >= 1; i--) {
+                //Inner loop for printing the symbol, for the pattern visulization.
+                for(int j = 1; j <= i; j++) {
 
-    //                 System.out.print(" ");
-    //             }
-    //             //2nd Inner loop for printing the symbol, for the pattern visulization.
-    //             for(int j = 1; j <= rowCount; j++) {
+                    System.out.print(i + " ");
+                }
 
-    //                 System.out.print(symbol + " ");
-    //             }
+                System.out.println(); //Row blocks/pixels printing for inner loop operation.
+            }
 
-    //             System.out.println(); //Row blocks/pixels printing for inner loop operation.
-    //         }
-
-    //     }
+        }
 
 
-    // }
+    }
 
       public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         //System.out.println("Let's Print a Full Pyramid Pattern.");
-        System.out.println("Let's Print a Numeric Half Pyramid Pattern.");
+        System.out.println("Let's Print a Numeric Inverted Half Pyramid Pattern.");
         System.out.print("\n Enter The Row Number (Without Decimal): ");
         int rowCount = sc.nextInt();
         
-        // sc.nextLine(); //Using it as a 'Buffer' for cleaning the 'Enter or Return' key (that is a String) to protect the 'symbol input' space.
+        sc.nextLine(); //Using it as a 'Buffer' for cleaning the 'Enter or Return' key (that is a String) to protect the 'symbol input' space.
 
-        // System.out.print("\n Enter the symbol (e.g. @, #, *, A,a etc.) you want to show in you pattern: ");
-        // String symbol = sc.nextLine();
+        System.out.print("\n Enter the symbol (e.g. @, #, *, A,a etc.) you want to show in you pattern: ");
+        String symbol = sc.nextLine();
 
 
         System.out.println(" Result:____________\n");
 
-        numericHalfPyramid(rowCount);        
+        rotatedInvertedHalfPyramid(rowCount, symbol);     
 
         sc.close(); //Closing the 'Scanner' object to prevent memory leaks.
           
