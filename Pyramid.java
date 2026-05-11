@@ -60,8 +60,8 @@ import java.util.Scanner;
 
     }
 
-    
-    public static void rotatedInvertedHalfPyramid(int rowCount, String symbol) {
+    //3: Numeric Inverted Half Pyramid Pattern.
+    public static void numericInvertedHalfPyramid(int rowCount, String symbol) {
         //Using 'if-else' statement to protect from false inputs.
         if(rowCount > 0) {
             //Outer loop.
@@ -79,6 +79,28 @@ import java.util.Scanner;
 
 
     }
+
+    // public static void rotatedInvertedHalfPyramid(int rowCount, String symbol) {
+    //     //Using 'if-else' statement to protect from false inputs.
+    //     if(rowCount > 0) {
+    //         //Outer loop.
+    //         for(int i = rowCount; i >= 1; i--) {
+    //             //Inner loop for printing the symbol, for the pattern visulization.
+    //             for(int j = 1; j <= i; j++) {
+
+    //                 System.out.print(i + " ");
+    //             }
+
+    //             System.out.println(); //Row blocks/pixels printing for inner loop operation.
+    //         }
+
+    //     }
+
+
+    // }
+
+
+
 
       public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
