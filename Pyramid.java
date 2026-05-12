@@ -75,6 +75,9 @@ import java.util.Scanner;
                 System.out.println(); //Row blocks/pixels printing for inner loop operation.
             }
 
+        } else {
+
+            System.out.println(" Your Input (Row) do not match our condition. Please enter values greater than 0.");
         }
 
 
@@ -100,6 +103,9 @@ import java.util.Scanner;
                 System.out.println(); //Row blocks/pixels printing for inner loop operation.
             }
 
+        } else {
+
+            System.out.println(" Your Input (Row) do not match our condition. Please enter values greater than 0.");
         }
 
 
