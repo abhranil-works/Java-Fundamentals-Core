@@ -61,7 +61,7 @@ import java.util.Scanner;
     }
 
     //3: Numeric Inverted Half Pyramid Pattern.
-    public static void numericInvertedHalfPyramid(int rowCount, String symbol) {
+    public static void numericInvertedHalfPyramid(int rowCount) {
         //Using 'if-else' statement to protect from false inputs.
         if(rowCount > 0) {
             //Outer loop.
@@ -82,6 +82,8 @@ import java.util.Scanner;
 
 
     }
+
+    //4: Rotated Numeric Inverted Half Pyramid Pattern.
 
     public static void rotatedInvertedNumericHalfPyramid(int rowCount) {
         //Using 'if-else' statement to protect from false inputs.
@@ -112,6 +114,28 @@ import java.util.Scanner;
     }
 
 
+    //5: Floyd's Triangle Pattern.
+
+    public static void floydsTriangle(int rowCount) {
+        //Using 'if-else' statement to protect from false inputs.
+        if(rowCount > 0) {
+            int number = 1; //It will be the number that will be printed in the pattern, and it will be increased by 1 for each print.
+
+            //outer loop.
+            for(int i = 1; i <= rowCount; i++) {
+                //Inner loop.
+                for(int j = 1; j <= i; j++) {
+                    System.out.print(number + " "); //It will print the current number and make some space for better visibility.
+                    number++; //It will increase the number by 1 for the next print.
+                }
+                System.out.println(); //Row blocks/pixels printing for inner loop operation.
+            }
+        } else {
+            System.out.println("Your Input (Row) do not match our condition. Please enter values greater than 0.");
+        }
+    }
+
+
 
 
       public static void main(String[] args) {
@@ -119,7 +143,8 @@ import java.util.Scanner;
 
         //System.out.println("Let's Print a Full Pyramid Pattern.");
         // System.out.println("Let's Print a Numeric Inverted Half Pyramid Pattern.");
-        System.out.println("Let's Print a Rotated Numeric Inverted Half Pyramid Pattern.");
+        // System.out.println("Let's Print a Rotated Numeric Inverted Half Pyramid Pattern.");
+        System.out.println("Let's Print a Floyd's Triangle Pattern.");
         System.out.print("\n Enter The Row Number (Without Decimal): ");
         int rowCount = sc.nextInt();
         
@@ -131,7 +156,7 @@ import java.util.Scanner;
 
         System.out.println(" Result:____________\n");
 
-        rotatedInvertedNumericHalfPyramid(rowCount);     
+        floydsTriangle(rowCount);     
 
         sc.close(); //Closing the 'Scanner' object to prevent memory leaks.
           
