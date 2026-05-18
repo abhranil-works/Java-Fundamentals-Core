@@ -136,6 +136,31 @@ import java.util.Scanner;
     }
 
 
+    //6: 0-1 Triangle Pattern.
+
+    public static void zeroOneTriangle(int rowCount) {
+      //Using 'if-else' statement to protect from false inputs.
+      if(rowCount > 0) {
+        //Outer loop.
+         for(int i = 1; i <= rowCount; i++) {
+            //inner loop.
+            for(int j = 1; j <= i; j++) {
+                  //Using 'if-else' statement to print 0 and 1 in the pattern.
+                  if((i + j) % 2 == 0) {
+                     System.out.print("1 ");
+                  } else {
+                     System.out.print("0 ");
+                  }
+            }
+
+            System.out.println(); //Row blocks/pixels printing for inner loop operation.
+         }
+      } else {
+         System.out.println("Your Input (Row) do not match our condition. Please enter values greater than 0.");
+      }
+    }
+
+
 
 
       public static void main(String[] args) {
@@ -144,7 +169,8 @@ import java.util.Scanner;
         //System.out.println("Let's Print a Full Pyramid Pattern.");
         // System.out.println("Let's Print a Numeric Inverted Half Pyramid Pattern.");
         // System.out.println("Let's Print a Rotated Numeric Inverted Half Pyramid Pattern.");
-        System.out.println("Let's Print a Floyd's Triangle Pattern.");
+        //System.out.println("Let's Print a Floyd's Triangle Pattern.");
+        System.out.println("Let's print a 0-1 Triangle Pattern.");
         System.out.print("\n Enter The Row Number (Without Decimal): ");
         int rowCount = sc.nextInt();
         
@@ -156,7 +182,7 @@ import java.util.Scanner;
 
         System.out.println(" Result:____________\n");
 
-        floydsTriangle(rowCount);     
+        zeroOneTriangle(rowCount);     
 
         sc.close(); //Closing the 'Scanner' object to prevent memory leaks.
           
